@@ -71,3 +71,4 @@ $ journalctl -e -u serverbot > ~/serverbot/servicelog.log
 ```
 
 More features coming soon to check your validator node health and alert in emergency cases.
+
