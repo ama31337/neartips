@@ -4,4 +4,5 @@
 
 # How to set up a telegram bot for Monitoring Alerts
 
+Telegram is one of the most popular messengers and it may be very useful to check your server and node health.
 
