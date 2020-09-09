@@ -72,3 +72,4 @@ $ journalctl -e -u serverbot > ~/serverbot/servicelog.log
 
 More features coming soon to check your validator node health and alert in emergency cases.
 
+<img src="https://github.com/ama31337/neartips/blob/master/manuals/near_node_alert.png">
