@@ -37,6 +37,15 @@ Telegram is one of the most popular messengers and it may be very useful to chec
  9. Check network load
  10. Make a speedtest
 
+### Near validator tools and alerts
+ 1. Alert if node is down
+ 2. Alert if node is out of sync
+ 3. Validator info:
+    - Pool name
+    - Pubkey
+    - Stake
+    - Blocks produced and expected
+
 ### Installation
  1. Create telegram bot and get Api Token
  2. Send to your new bot command /start
@@ -48,6 +57,17 @@ cd $HOME && git clone -v https://github.com/ama31337/serverbot.git && cd ./serve
  5. Run installation script
 ```sh
 ./installsbot.sh
+```
+### Upddate
+ 1. Backup your old config and pull changes from git
+```sh
+cd $HOME/serverbot && mv config.py config.py.bak && git pull
+```
+ 2. Compare the configs and adjust if necessary
+ 3. Restart bot
+```sh
+botstop
+botstart
 ```
 
 ### Start, stop or check bot status
@@ -70,6 +90,8 @@ Find in bot.py telebot.logger.setLevel(logging.ERROR) and change ERROR to DEBUG,
 $ journalctl -e -u serverbot > ~/serverbot/servicelog.log
 ```
 
-More features coming soon to check your validator node health and alert in emergency cases.
+New features added!
+Check your validator node health and alert in emergency cases.
+Check your pool info.
 
 <img src="https://github.com/ama31337/neartips/blob/master/manuals/near_node_alert.png">
