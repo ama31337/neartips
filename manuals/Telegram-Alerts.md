@@ -58,7 +58,7 @@ cd $HOME && git clone -v https://github.com/ama31337/serverbot.git && cd ./serve
 ```sh
 ./installsbot.sh
 ```
-### Upddate
+### Update
  1. Backup your old config and pull changes from git
 ```sh
 cd $HOME/serverbot && mv config.py config.py.bak && git pull
