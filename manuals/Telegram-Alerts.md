@@ -44,7 +44,9 @@ Telegram is one of the most popular messengers and it may be very useful to chec
     - Pool name
     - Pubkey
     - Stake
-    - Blocks produced and expected
+    - Blocks produced and
+ 4. Near logs (last 10 lines).
+ 
 
 ### Installation
  1. Create telegram bot and get Api Token
