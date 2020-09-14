@@ -64,6 +64,7 @@ cd $HOME && git clone -v https://github.com/ama31337/serverbot.git && cd ./serve
  1. Backup your old config and pull changes from git
 ```sh
 cd $HOME/serverbot && mv config.py config.py.bak && git pull
+source /home/$USER/.bash_aliases
 ```
  2. Compare the configs and adjust if necessary
  3. Restart bot
@@ -75,7 +76,6 @@ botstart
 ### Start, stop or check bot status
 If you make any changes in config you need to restart your bot. To start, stop or check status you can use commands in bash:
 ```sh
-source /home/$USER/.bash_aliases
 botstart
 botstop
 botstatus
