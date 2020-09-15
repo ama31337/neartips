@@ -21,7 +21,7 @@ if [ $? -ne 0 ]; then
         then
             mv /home/$USER/nearcore /home/$USER/nearcore.bak/nearcore-"`date +"%Y-%m-%d(%H:%M)"`"
             mv /home/$USER/nearcore.new /home/$USER/nearcore
-            cd /home/near/
+            cd /home/$USER/
             nearup stop
             nearup run $networktype --binary-path /home/$USER/nearcore/target/release/
             echo "update done at `date +"%Y-%m-%d(%H:%M)"`" >> /home/$USER/near-logs/near_update.log
