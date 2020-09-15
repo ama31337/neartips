@@ -23,9 +23,9 @@ if [ $? -ne 0 ]; then
             mv /home/$USER/nearcore.new /home/$USER/nearcore
             cd /home/near/
             nearup stop
-            nearup run $networktype --binary-path ~/nearcore/target/release/
-            echo "update done" >> near_update.log
+            nearup run $networktype --binary-path /home/$USER/nearcore/target/release/
+            echo "update done at `date +"%Y-%m-%d(%H:%M)"`" >> /home/$USER/near-logs/near_update.log
         else
-            echo "build failed" >> near_update.log
+            echo "build failed at `date +"%Y-%m-%d(%H:%M)"`" >> /home/$USER/near-logs/near_update.log
         fi
 fi
