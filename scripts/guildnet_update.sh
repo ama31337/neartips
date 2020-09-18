@@ -11,10 +11,11 @@ if [ $? -ne 0 ]; then
     echo "start update";
     rustup default nightly
     rm -rf /home/$USER/nearcore.new
-#    version=$(curl -s https://rpc.openshards.io/status | jq .version.version)
+    version=$(curl -s https://rpc.openshards.io/status | jq .version.version)
 #    strippedversion=$(echo "$version" | awk -F "\"" '{print $2}' | awk -F "-" '{print $1}')
-#    git clone --branch $strippedversion https://github.com/nearprotocol/nearcore.git /home/$USER/nearcore.new
-    git clone  https://github.com/near-guildnet/nearcore.git /home/$USER/nearcore.new
+    strippedversion=$(echo "$version" | awk -F "\"" '{print $2}')
+    git clone --branch $strippedversion https://github.com/nearprotocol/nearcore.git /home/$USER/nearcore.new
+#    git clone  https://github.com/near-guildnet/nearcore.git /home/$USER/nearcore.new
     cd /home/$USER/nearcore.new
     make release
         #if make make was succesfully startup a new node
