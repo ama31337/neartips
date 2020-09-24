@@ -1,3 +1,5 @@
+<img src="https://vitalpoint.ai/wp-content/uploads/2020/06/near_logo-1.png"  width="128" height="33">
+
 ---
 id: running-localnet
 title: Running Near localnet
