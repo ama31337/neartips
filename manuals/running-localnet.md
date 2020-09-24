@@ -46,6 +46,8 @@ cat /home/$USER/near-update/localnet/node0/node_key.json | grep public_key
 ```
 5. Now your nodes will try to connect and you'll see what you've 4 peers. If nodes running fine, blocks counting will start to increase.
 
+<img src="https://github.com/ama31337/neartips/blob/master/manuals/near-localnet.png">
+
 ! Congratilations, your own NEAR local net is running fine and you can process any tests on it.
 
 6. To stop localnet
