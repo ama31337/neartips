@@ -12,8 +12,8 @@ nearup localnet
 will start 4 local nodes and node0 will start on default ports, same as your main validator node if you run on the same machine, so to run a localnet you need to stop your main validator node.
 
 There are solution to run localnet in parallel with your main node:
-        - Run those nodes on different ports, which you can setup in config for each of them.
-        - Run localnet nodes w/o nearup, so nearup will not start a watcher for new nodes and you can stop them w/o affect your main node.
+   - Run those nodes on different ports, which you can setup in config for each of them.
+   - Run localnet nodes w/o nearup, so nearup will not start a watcher for new nodes and you can stop them w/o affect your main node.
 
 We are start from the point what you already have a compiled binary of near node on your machine in default directory: /home/$USER/nearcore/target/release/
 1. Clone the near-update system
