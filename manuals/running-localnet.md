@@ -5,7 +5,7 @@ sidebar_label: Running Near localnet
 ---
 
 For testing purposes you can run a localnet on your machine with as much nodes as you want.
-Default localnet setup whoch you can run simply with 
+Default localnet setup which you can run simply with 
 ```sh
 nearup localnet
 ```
