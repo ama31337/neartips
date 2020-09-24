@@ -21,12 +21,12 @@ if [ $? -ne 0 ]; then
         #if make make was succesfully startup a new node
         if [ $? -eq 0 ]
         then
-#            mv /home/$USER/nearcore /home/$USER/nearcore.bak/nearcore-"`date +"%Y-%m-%d(%H:%M)"`"
-            mv /home/$USER/nearcore /home/$USER/nearcore-"`date +"%Y-%m-%d(%H:%M)"`"
+            mkdir -p /home/$USER/nearcore.bak
+            mv /home/$USER/nearcore /home/$USER/nearcore.bak/nearcore-"`date +"%Y-%m-%d(%H:%M)"`"
             mv /home/$USER/nearcore.new /home/$USER/nearcore
             cd /home/$USER/
             nearup stop
-            nearup  guildnet --nodocker --binary-path ~/nearcore/target/release/
+            nearup guildnet --nodocker --binary-path /home/$USER/nearcore/target/release/
             echo "update done at `date +"%Y-%m-%d(%H:%M)"`" >> /home/$USER/near-logs/near_update.log
         else
             echo "build failed at `date +"%Y-%m-%d(%H:%M)"`" >> /home/$USER/near-logs/near_update.log
