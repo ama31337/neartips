@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #choose betanet or testnet
-networktype=$betanet
+networktype="betanet"
 
 #check node version diff
 diff <(curl -s https://rpc.$networktype.near.org/status | jq .version) <(curl -s http://127.0.0.1:3030/status | jq .version)
