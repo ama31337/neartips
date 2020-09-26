@@ -65,4 +65,4 @@ Or just stop them all at once:
 pkill neard
 ```
 
-If manual was helpful to you, feel free to donate a tip --> @31337.near
+If manual was helpful to you, feel free to donate a tip --> [@31337.near](https://explorer.near.org/accounts/31337.near)
