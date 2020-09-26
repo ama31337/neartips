@@ -97,3 +97,5 @@ Check your validator node health and alert in emergency cases.
 Check your pool info.
 
 <img src="https://github.com/ama31337/neartips/blob/master/manuals/near_node_alert.png">
+
+If bot was helpful to you, feel free to donate a tip --> [@31337.near](https://explorer.near.org/accounts/31337.near)
