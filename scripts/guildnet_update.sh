@@ -27,8 +27,10 @@ if [ $? -ne 0 ]; then
             cd /home/$USER/
             nearup stop
             nearup guildnet --nodocker --binary-path /home/$USER/nearcore/target/release/
+            mkdir -p /home/$USER/near-logs
             echo "update done at `date +"%Y-%m-%d(%H:%M)"`" >> /home/$USER/near-logs/near_update.log
         else
+            mkdir -p /home/$USER/near-logs
             echo "build failed at `date +"%Y-%m-%d(%H:%M)"`" >> /home/$USER/near-logs/near_update.log
         fi
 fi
