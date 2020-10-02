@@ -102,3 +102,4 @@ All networks are supported: betanet, testnet, guidnet, mainnet.
 <img src="https://github.com/ama31337/neartips/blob/master/manuals/serverbot.gif">
 
 If bot was helpful to you, feel free to donate a tip --> [@31337.near](https://explorer.near.org/accounts/31337.near)
+Or stake with us --> [@lux.poolv1.near](https://explorer.near.org/accounts/lux.poolv1.near)
