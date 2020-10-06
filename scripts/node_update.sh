@@ -11,7 +11,7 @@ if [ $? -ne 0 ]; then
     echo "start update";
     rustup default nightly
     rm -rf /home/$USER/nearcore.new
-    version=$(curl -s https://rpc.$networktype.near.org/status | jq .version.version)
+    version=$(curl -s https://rpc.$networktype.near.org/status | jq .version)
     strippedversion=$(echo "$version" | awk -F "\"" '{print $2}' | awk -F "-" '{print $1}')
     git clone --branch $strippedversion https://github.com/nearprotocol/nearcore.git /home/$USER/nearcore.new
     cd /home/$USER/nearcore.new
