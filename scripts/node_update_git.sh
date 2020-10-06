@@ -22,7 +22,7 @@ if [ $? -ne 0 ]; then
     echo "start update";
     rustup default nightly
     rm -rf /home/$USER/nearcore.new
-    strippedversion=$(echo "$gitversion" | awk -F "\"" '{print $2}' | awk -F "-" '{print $1}')
+#    strippedversion=$(echo "$gitversion" | awk -F "\"" '{print $2}' | awk -F "-" '{print $1}')
     git clone --branch $strippedversion https://github.com/nearprotocol/nearcore.git /home/$USER/nearcore.new
     cd /home/$USER/nearcore.new
     make release
