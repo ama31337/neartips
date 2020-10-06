@@ -23,7 +23,7 @@ if [ $? -ne 0 ]; then
     rustup default nightly
     rm -rf /home/$USER/nearcore.new
 #    strippedversion=$(echo "$gitversion" | awk -F "\"" '{print $2}' | awk -F "-" '{print $1}')
-    git clone --branch $strippedversion https://github.com/nearprotocol/nearcore.git /home/$USER/nearcore.new
+    git clone --branch $gitversion https://github.com/nearprotocol/nearcore.git /home/$USER/nearcore.new
     cd /home/$USER/nearcore.new
     make release
         #if make was succesfully test a new node
