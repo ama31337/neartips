@@ -4,6 +4,7 @@
 # to execute systemctl add nopasswd execution for sudo users:
 # sudo vim /etc/sudoers
 # %sudo  ALL=(ALL) NOPASSWD: ALL
+# to setup neard service read manuals section
 # for telegram alerts put sendmsg_tgbot.sh in the same folder
 # credits to @ama31337 and @denys4k
 
