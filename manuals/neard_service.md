@@ -1,4 +1,4 @@
-Recommended way to run your validtor node is via systemd service, change <user> to the actual one
+Recommended way to run your validtor node is via systemd service, change "<user>" to the actual one
 ```
 sudo vim /etc/systemd/system/neard.service
 ```
