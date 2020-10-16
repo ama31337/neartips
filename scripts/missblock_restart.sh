@@ -45,6 +45,6 @@ if (($block_diff>=$misslimit)) && (($st == 0)) ; then
 fi
 
 # reset state
-if [ "$block_diff" == "" ]; then
+if (($block_diff == 0)); then
     echo 0 > $STATUS_HOLDER
 fi
