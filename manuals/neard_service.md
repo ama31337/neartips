@@ -14,10 +14,11 @@ ExecStart=/home/<user>/nearcore/target/release/neard run
 [Install]
 WantedBy=default.target
 ```
-Enable and start (you can use stop as well)
+To enable start, or stop:
 ```
 sudo systemctl enable neard.service
 sudo systemctl start neard.service
+sudo systemctl stop neard.service
 ```
 To check logs
 ```
