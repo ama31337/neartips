@@ -36,9 +36,11 @@ fi
 
 # if miss more than $misslimit blocks, restart node
 if (($block_diff>=$misslimit)) && (($st == 0)) ; then
+  mkdir -p /home/$USER/near-logs
+  cp /home/$USER/.near/data/LOG /home/$USER/near-logs/
+  sudo journalctl -u neard.service > /home/$USER/near-logs/neard_service.log
   sudo systemctl stop neard.service
   sudo systemctl start neard.service
-  mkdir -p /home/$USER/near-logs
   echo "node restarted `date +"%Y-%m-%d(%H:%M)"`" >> /home/$USER/near-logs/node_restart.log
   echo 1 > $STATUS_HOLDER
   "${SCRIPT_DIR}/sendmsg_tgbot.sh" "$HOSTNAME inform you:" "Near node restarted because of $block_diff missed blocks"  2>&1 > /dev/null
