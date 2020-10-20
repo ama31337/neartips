@@ -29,7 +29,7 @@ if [ "$block_diff" =  "" ]; then
 fi
 
 # status holder
-STATUS_HOLDER="/tmp/status1.txt"
+STATUS_HOLDER1="/tmp/status1.txt"
 STATUS_HOLDER2="/tmp/status2.txt"
 touch $STATUS_HOLDER1
 touch $STATUS_HOLDER2
