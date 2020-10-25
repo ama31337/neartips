@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # TRY AT YOUR OWN RISK, SCRIPT IS NOT TESTED
-# KEEP CALM AND !!! TEST IN PROD !!! ;)
 
 # sript to restart valdiator node in case of missed blocks
 # to execute systemctl add nopasswd execution for sudo users:
@@ -46,7 +45,7 @@ if [ "$st2" =  "" ]; then
     st2=0
 fi
 
-# if miss more than $misslimit blocks, restart node
+# if miss more than $misslimit1 blocks, restart node 1st time
 if (($block_diff>=$misslimit1)) && (($st1 == 0)) ; then
   mkdir -p /home/$USER/near-logs
   cp /home/$USER/.near/data/LOG /home/$USER/near-logs/
