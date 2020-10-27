@@ -18,7 +18,7 @@ misslimit=5 # restart after
 SCRIPT_DIR=`cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P`
 
 # diff check
-block_diff=$(curl -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json' https://rpc.$network.near.org | jq -c '.result.current_validators[] | select(.account_id | contains ("$POOL_ID"))' | jq '.num_expected_blocks - .num_produced_blocks');
+block_diff=$(curl -d '{"jsonrpc": "2.0", "method": "validators", "id": "dontcare", "params": [null]}' -H 'Content-Type: application/json' https://rpc.$network.near.org | jq -c '.result.current_validators[] | select(.account_id | contains ("'$POOL_ID'"))' | jq '.num_expected_blocks - .num_produced_blocks');
 echo "Block difference: $block_diff"
 if [ "$block_diff" =  "" ]; then
     block_diff=0
