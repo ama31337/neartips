@@ -54,7 +54,6 @@ if (($block_diff>=$misslimit1)) && (($st1 == 0)) ; then
   sudo systemctl stop neard.service
   sudo systemctl start neard.service
   echo "node restarted `date +"%Y-%m-%d(%H:%M)"`" >> /home/$USER/near-logs/node_restart.log
-
   "${SCRIPT_DIR}/sendmsg_tgbot.sh" "$HOSTNAME inform you:" "Near node restarted because of $block_diff missed blocks"  2>&1 > /dev/null
 fi
 
@@ -67,7 +66,6 @@ if (($block_diff>=$misslimit2)) && (($st2 == 0)) ; then
   sudo systemctl stop neard.service
   sudo systemctl start neard.service
   echo "node restarted `date +"%Y-%m-%d(%H:%M)"`" >> /home/$USER/near-logs/node_restart.log
-
   "${SCRIPT_DIR}/sendmsg_tgbot.sh" "$HOSTNAME inform you:" "Near node restarted because of $block_diff missed blocks"  2>&1 > /dev/null
 fi
 
