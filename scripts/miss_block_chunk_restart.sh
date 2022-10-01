@@ -76,7 +76,7 @@ if (( ${block_diff} >= ${missed_blocks_1} )) && ((${bl_st1} == 0)) ; then
 fi
 
 # if miss more than $missed_blocks_2 blocks, restart node 2nd time
-if (( ${block_diff} >= ${missed_blocks_2} )) && (($st2 == 0)) ; then
+if (( ${block_diff} >= ${missed_blocks_2} )) && ((${bl_st2} == 0)) ; then
   echo 1 > ${BLOCK_STATUS_HOLDER2}
   mkdir -p ${HOME}/near-logs
 #  cp ${HOME}/.near/data/LOG ${HOME}/near-logs/
@@ -87,7 +87,7 @@ if (( ${block_diff} >= ${missed_blocks_2} )) && (($st2 == 0)) ; then
 fi
 
 # if miss more than $missed_chunks_1 chunks, restart node 1st time
-if (( ${chunk_diff} >= ${missed_chunks_1} )) && ((${bl_st1} == 0)) ; then
+if (( ${chunk_diff} >= ${missed_chunks_1} )) && ((${ch_st1} == 0)) ; then
   echo 1 > ${CHUNK_STATUS_HOLDER1}
   mkdir -p ${HOME}/near-logs
 #  cp ${HOME}/.near/data/LOG ${HOME}/near-logs/
@@ -98,7 +98,7 @@ if (( ${chunk_diff} >= ${missed_chunks_1} )) && ((${bl_st1} == 0)) ; then
 fi
 
 # if miss more than $missed_chunks_2 chunks, restart node 2nd time
-if (( ${chunk_diff} >= ${missed_chunks_2} )) && (($st2 == 0)) ; then
+if (( ${chunk_diff} >= ${missed_chunks_2} )) && ((${ch_st2} == 0)) ; then
   echo 1 > ${CHUNK_STATUS_HOLDER2}
   mkdir -p ${HOME}/near-logs
 #  cp ${HOME}/.near/data/LOG ${HOME}/near-logs/
